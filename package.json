@@ -1,25 +1,26 @@
 {
   "name": "strapi-plugin-video-thumbnail",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "Video thumbnail plugin for Strapi",
   "strapi": {
-    "name": "Video Thumbnail",
+    "name": "video-thumbnail",
     "icon": "plug",
+    "kind": "plugin",
     "description": "Video thumbnail plugin for Strapi"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:darron1217/strapi-plugin-video-thumbnail.git"
+    "url": "git@github.com:Shadowboxer-OpenSource/strapi-plugin-video-thumbnail"
   },
   "dependencies": {
     "aws-sdk": "^2.1043.0",
     "fluent-ffmpeg": "^2.1.2",
-    "strapi-plugin-upload": "^3.4.4"
+    "@strapi/plugin-upload": "^4.1.5"
   },
   "author": {
-    "name": "Darron Park",
-    "email": "darron1217@gmail.com",
-    "url": ""
+    "name": "Andrew Bednarz (originally Darron Park)",
+    "email": "devs@shadowboxer.co",
+    "url": "https://shadowboxer.co"
   },
   "maintainers": [
     {
@@ -29,7 +30,7 @@
     }
   ],
   "engines": {
-    "node": ">=10.16.0 <=14.x.x",
+    "node": ">=10.16.0 <=16.x.x",
     "npm": ">=6.0.0"
   },
   "license": "MIT"
