@@ -10,12 +10,12 @@ module.exports = ({ strapi }) => {
   strapi.db.lifecycles.subscribe({
     models: ["plugin::upload.file"],
     async beforeCreate(event) {
-      console.log(event.params.data);
       // Run if file type is video
-      if (event.params.data.mime.startsWith("video")) {
-        await generateThumbnail(event.params.data);
+      const data = event.params.data;
+      if (data.mime.startsWith("video")) {
+        await generateThumbnail(data);
       } else {
-        // console.log("NOT A VIDEO FILE");
+        console.log("NOT A VIDEO FILE");
       }
     },
   });
